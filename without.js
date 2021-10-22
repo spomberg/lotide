@@ -1,23 +1,22 @@
 const assertArraysEqual = function(firstArray, secondArray) {
   let equal = true;
-  if (firstArray.length !== secondArray.length){
+  if (firstArray.length !== secondArray.length) {
     equal = false;
   } else for (let x = 0; x < firstArray.length && equal; x++) {
     firstArray[x] === secondArray[x] ? equal = true : equal = false;
   }
-  equal ? console.log(`✅✅✅ Assertion Passed:  ${firstArray} === ${secondArray}`) : 
-  console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
-}
+  equal ? console.log(`✅✅✅ Assertion Passed:  ${firstArray} === ${secondArray}`) : console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
+};
 
 const eqArrays = function(firstArray, secondArray) {
   let equal = true;
-  if (firstArray.length !== secondArray.length){
+  if (firstArray.length !== secondArray.length) {
     return false;
   } else for (let x = 0; x < firstArray.length && equal; x++) {
     firstArray[x] === secondArray[x] ? equal = true : equal = false;
   }
   return equal;
-}
+};
 
 const without = function(source, itemsToRemove) {
   let output = [];
@@ -25,7 +24,7 @@ const without = function(source, itemsToRemove) {
   for (let x = 0; x < source.length; x++) {
     let match = false;
     for (let y = 0; y < itemsToRemove.length; y++) {
-      if (source[x] === itemsToRemove[y]){ 
+      if (source[x] === itemsToRemove[y]) {
         match = true;
       }
     }
@@ -33,7 +32,7 @@ const without = function(source, itemsToRemove) {
       output.push(source[x]);
     }
   }
-    return output;
+  return output;
 };
 
 const words = ["hello", "world", "lighthouse"];
