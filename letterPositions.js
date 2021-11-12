@@ -1,24 +1,3 @@
-const assertArraysEqual = function(firstArray, secondArray) {
-  let equal = true;
-  if (firstArray.length !== secondArray.length) {
-    equal = false;
-  } else for (let x = 0; x < firstArray.length && equal; x++) {
-    firstArray[x] === secondArray[x] ? equal = true : equal = false;
-  }
-  equal ? console.log(`✅✅✅ Assertion Passed:  ${firstArray} === ${secondArray}`) :
-    console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
-};
-
-const eqArrays = function(firstArray, secondArray) {
-  let equal = true;
-  if (firstArray.length !== secondArray.length) {
-    return false;
-  } else for (let x = 0; x < firstArray.length && equal; x++) {
-    firstArray[x] === secondArray[x] ? equal = true : equal = false;
-  }
-  return equal;
-};
-
 const letterPositions = function(sentence) {
   const results = {};
 
@@ -32,5 +11,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertArraysEqual(letterPositions('hello').e, [1]);
-
+module.exports = letterPositions;
