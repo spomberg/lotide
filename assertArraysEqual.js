@@ -9,8 +9,4 @@ const assertArraysEqual = function(firstArray, secondArray) {
   console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
 }
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [3, 2, 1]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
+module.exports = assertArraysEqual;
